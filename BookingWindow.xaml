@@ -1,0 +1,21 @@
+﻿<Page x:Class="WpfApp1.BookingWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BookingWindow">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" x:Name="BookingView">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID бронирования" Binding="{Binding ID_Booking}"/>
+                <DataGridTextColumn Header="ID клиента" Binding="{Binding Client_ID}"/>
+                <DataGridTextColumn Header="ID номера" Binding="{Binding Room_ID}"/>
+                <DataGridTextColumn Header="Дата въезда" Binding="{Binding CheckinDate, StringFormat={}{0:dd.MM.yyyy}}"/>
+                <DataGridTextColumn Header="Дата выезда" Binding="{Binding CheckoutDate, StringFormat={}{0:dd.MM.yyyy}}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
